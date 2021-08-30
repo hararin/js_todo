@@ -13,6 +13,17 @@ const completeTask = completeButton => {
   const targetTask = completeButton.closest('li');
   targetTask.classList.add('isCompleted');
   targetTask.removeChild(completeButton);
+  const returnButton = document.createElement('button');
+  returnButton.innerText = '未完了';
+  returnButton.addEventListener('click', () => returnTask(returnButton, completeButton));
+  targetTask.appendChild(returnButton);
+}
+
+const returnTask = (returnButton, completeButton) => {
+  const targetTask = returnButton.closest('li');
+  targetTask.classList.remove('isCompleted');
+  targetTask.removeChild(returnButton);
+  targetTask.appendChild(completeButton);
 }
 
 const addTask = task => {
