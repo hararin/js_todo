@@ -8,11 +8,18 @@
     <header class="header">
       <h1 class="title">Todo List</h1>
     </header><!-- /header -->
-    <form>
+    <form class="form">
       <input class="js-addTask-value" type="text" name="">
       <button type="button" class="js-addTask-trigger">登録</button>
     </form>
-    <ul class="todo js-addTask-target"></ul>
+    <div class="todoList">
+      <h3>ToDoリスト</h3>
+      <ul class="todo js-addTask-target"></ul>
+    </div>
+    <div class="finishedList">
+      <h3> Doneリスト</h3>
+      <ul class="todo js-finishedTask-target"></ul>
+    </div>
     <script src="js/todo.js"></script>
   </body>
 </html>

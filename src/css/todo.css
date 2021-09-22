@@ -1,3 +1,11 @@
 .isCompleted {
   text-decoration: line-through;
 }
+
+.title, .form {
+  text-align: center;
+}
+
+.todo > li {
+  margin: 5px;
+}
